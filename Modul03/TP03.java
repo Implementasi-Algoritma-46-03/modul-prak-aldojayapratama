@@ -9,10 +9,9 @@ public class TP03 {
         int Jatah = JumlahPermen / TotalOrang;
         int Sisa = JumlahPermen % TotalOrang;
 
-        System.out.println("==Masukan #1==");
-        System.out.println("Jumlah Permen Masing-Masing : " + Jatah);
-        System.out.println("Sisa Permen Dira : " + Sisa);
-        System.out.println();
+       
+        System.out.println(Jatah);
+        System.out.println(Sisa);
 
         int JumlahPermen2 = 20;
         int JumlahTemanDira2 = 2;
@@ -21,8 +20,8 @@ public class TP03 {
 
         int Jatah2 = JumlahPermen2 / TotalOrang2;
         int Sisa2 = JumlahPermen2 % TotalOrang2;
-        System.out.println("==Masukan #2==");
-        System.out.println("Jumlah Permen Masing-Masing : " + Jatah2);
-        System.out.println("Sisa Permen Dira : " +Sisa2);
+        
+        System.out.println(Jatah2);
+        System.out.println(Sisa2);
     }
 }
