@@ -10,8 +10,8 @@ public class Jurnal03 {
         int a = Scanner.nextInt();
         int b = Scanner.nextInt();
 
-        double na = (0.25 * p) + (0.25 * a) + (0.4 * b);
-        System.out.printf("%.2f%n", na);  
+        double na = (0.25 * p) + (0.35 * a) + (0.4 * b);
+        System.out.printf("%.2f", na);  
         System.out.println("\n" + "Lulus MK: " + (na >= 75));  
 
 

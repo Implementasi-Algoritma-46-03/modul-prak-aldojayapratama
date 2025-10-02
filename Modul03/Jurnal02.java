@@ -11,6 +11,6 @@ public class Jurnal02 {
 
         double rataRata =  (a + b + c)/3.0;
         
-        System.out.printf("%.2f", rataRata);
+        System.out.printf("Nilai rata-rata: %.2f", rataRata);
     }
 }

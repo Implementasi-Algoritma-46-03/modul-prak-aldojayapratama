@@ -7,6 +7,6 @@ public class TP02 {
         int JumlahBarang = 5;
         int TotalBayar = JumlahBarang * Apel; 
 
-        System.out.println("Hi, " + Nama + " Total belanja adalah " + TotalBayar + " rupiah. ");
+        System.out.println("Hi, " + Nama + ". Total belanja adalah " + TotalBayar + " rupiah.");
     }
 }
