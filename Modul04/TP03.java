@@ -1,21 +1,18 @@
 import java.util.Scanner;
-
 public class TP03 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        int D = input.nextInt();
-        int R = input.nextInt();
-        int I = input.nextInt();
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
+        int d = s.nextInt();
+        int r = s.nextInt();
+        int i = s.nextInt();
 
-        if (D > R && D > I) {
+        if (d > r && d > i)
             System.out.println("Dira");
-        } else if (R > D && R > I) {
+        else if (r > d && r > i)
             System.out.println("Radi");
-        } else {
+        else
             System.out.println("Idar");
-        }
-
-        input.close();
     }
 }
+
