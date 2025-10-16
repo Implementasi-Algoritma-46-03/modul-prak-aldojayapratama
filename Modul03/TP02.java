@@ -1,34 +1,30 @@
-import java.util.Scanner;
+ public class TP01 {
+	public static void main(final String[] args) {
+		System.out.println("----------");
+		System.out.println("Tabungan Dira");
+		System.out.println("Masukan 1");
+		System.out.println("==========");
+		int X = 500000;
+		int Y = 10000;
+		int N = 30;
 
-public class TP02 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String nama = input.next();
-        int jumlahBarang = input.nextInt();
-        int hargaPerBarang = input.nextInt();
-        int totalBelanja = jumlahBarang * hargaPerBarang;
-        System.out.println("Hi, " + nama + ". Total belanja adalah " + totalBelanja + " rupiah.");
-        input.close();
-public class TP02 {
+		
+		int total = X + (Y*N);
+		System.out.println(total);
 
-    public static void main(String[] args) {
-        Scanner tugas2 = new Scanner(System.in);
-         // Kerjakan soalnya di sini
 
-        String nama = tugas2.next();
-        int jumlah = tugas2.nextInt();
-        int harga = tugas2.nextInt();
+		System.out.println("==========");
+		System.out.println("Tabungan Dira");
+		System.out.println("Masukan 2");
+		System.out.println("----------");
+		int X2 = 250000;
+		int Y2 = 25000;
+		int N2 = 30;
 
-        int total = harga * jumlah;
-
-        System.out.println("Hi, " + nama + ". Total belanja adalah " + total + " rupiah.");
-
-        tugas2.close();
-    }
+		
+		int total2 = X2 + (Y2*N2);
+		System.out.println(total2);
+	}
 }
+    
 
-/**PS E:\Pasyaaaaaaa\d3if-49-03-Pasya16> cd Modul01
-PS E:\Pasyaaaaaaa\d3if-49-03-Pasya16\Modul01> javac TP02.java
-E:\Pasyaaaaaaa\d3if-49-03-Pasya16\Modul01> java TP02
-Dira 5 2000
-10000*/

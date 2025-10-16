@@ -1,48 +1,30 @@
-//mengimpor scanner (supaya bisa membaca input dari keyboard)
-import java.util.Scanner;
+ public class TP01 {
+	public static void main(final String[] args) {
+		System.out.println("----------");
+		System.out.println("Tabungan Dira");
+		System.out.println("Masukan 1");
+		System.out.println("==========");
+		int X = 500000;
+		int Y = 10000;
+		int N = 30;
 
-//membuat kelas namanya TP01, harus sesuai sama nama file
-import java.util.Scanner;
+		
+		int total = X + (Y*N);
+		System.out.println(total);
 
-public class TP01 {
-    public static void main(String[] args) {
 
-        //membuat objek scanner namanya input
-        Scanner input = new Scanner(System.in);
+		System.out.println("==========");
+		System.out.println("Tabungan Dira");
+		System.out.println("Masukan 2");
+		System.out.println("----------");
+		int X2 = 250000;
+		int Y2 = 25000;
+		int N2 = 30;
 
-        //menginput tiga bagian
-        int tabunganAwal = input.nextInt();
-        int tabunganHarian = input.nextInt();
-        int jumlahHari = input.nextInt();
-
-        //total tabungan itu dari tabungan awal ditambah tabungan harian yang dikali jumlah hari.
-        int totalTabungan = tabunganAwal + (tabunganHarian * jumlahHari);
- 
-        //menampilkan hasil akhir tabungan
-        System.out.println(totalTabungan);
-        //nutup scanner
-        input.close();
-    }
+		
+		int total2 = X2 + (Y2*N2);
+		System.out.println(total2);
+	}
 }
+    
 
-/*PS E:\Pasyaaaaaaa\d3if-49-03-Pasya16> cd Modul01
-PS E:\Pasyaaaaaaa\d3if-49-03-Pasya16\Modul01> javac TP01.java
-E:\Pasyaaaaaaa\d3if-49-03-Pasya16\Modul01> java TP01
-500000 10000 30
-800000*/
-    public static void main(final String[] args) {
-        // Kerjakan soalnya di sini
-
-        Scanner tugas1 = new Scanner(System.in);
-
-        int x = tugas1.nextInt();
-        int y = tugas1.nextInt();
-        int n = tugas1.nextInt();
-        
-        int total = x + (y * n);
-
-        System.out.println(total);
-        
-        tugas1.close();
-    }
-}
