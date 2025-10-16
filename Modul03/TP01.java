@@ -1,30 +1,18 @@
- public class TP01 {
-	public static void main(final String[] args) {
-		System.out.println("----------");
-		System.out.println("Tabungan Dira");
-		System.out.println("Masukan 1");
-		System.out.println("==========");
-		int X = 500000;
-		int Y = 10000;
-		int N = 30;
+import java.util.Scanner;
+public class Jurnal01 {
 
-		
-		int total = X + (Y*N);
-		System.out.println(total);
+    public static void main(final String[] args) {
+        // Kerjakan soalnya di sini
+        Scanner aldo = new Scanner(System.in);
+        int n = aldo.nextInt();
 
+        int jumlahlembar1000 = n / 1000;
+        int sisa = n % 1000;
 
-		System.out.println("==========");
-		System.out.println("Tabungan Dira");
-		System.out.println("Masukan 2");
-		System.out.println("----------");
-		int X2 = 250000;
-		int Y2 = 25000;
-		int N2 = 30;
+        System.out.println(jumlahlembar1000);
+        System.out.println(sisa);
 
-		
-		int total2 = X2 + (Y2*N2);
-		System.out.println(total2);
-	}
+      
+
+    }
 }
-    
-
