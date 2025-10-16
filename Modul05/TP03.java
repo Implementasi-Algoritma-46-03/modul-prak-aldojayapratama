@@ -36,7 +36,7 @@ public class TP03 {
                 if (luas == (long) luas && keliling == (long) keliling) {
                     System.out.println((long)luas + " " + (long)keliling);
                 } else {
-                    System.out.printf("%.2f %.2f\n", luas, keliling);
+                    System.out.printf("%.2f\n", luas, keliling);
                 }
                 break;
             }
@@ -45,7 +45,7 @@ public class TP03 {
                 double radius = diameter / 2.0;
                 double luas = PI * radius * radius;
                 double keliling = PI * diameter;
-                System.out.printf("%.2f %.2f\n", luas, keliling);
+                System.out.printf("%.2f%\n", luas, keliling);
                 break;
             }
             default:
