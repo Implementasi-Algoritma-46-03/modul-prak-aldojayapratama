@@ -22,11 +22,7 @@ public class Jurnal03 {
                 System.out.println(A * B);
                 break;
             case '/':
-                if (B != 0) {
-                    System.out.println((double) A / B);
-                } else {
-                    System.out.println("Pembagi tidak boleh 0");
-                }
+                System.out.printf("%.7f%n", (double) A / B);
                 break;
             default:
                 System.out.println("Tanda operasi tidak valid");

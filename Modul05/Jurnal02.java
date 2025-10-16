@@ -6,7 +6,7 @@ public class Jurnal02 {
         String hari = inputScanner.next();
         int n = inputScanner.nextInt();
 
-        String[] daftarhari = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"};
+        String[] daftarhari = {"Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"};
 
         int posisi = 0;
 
@@ -23,7 +23,7 @@ public class Jurnal02 {
             case "Kamis":
                 posisi = 3;
                 break;
-            case "Jumat":
+            case "Jum'at":
                 posisi = 4;
                 break;
             case "Sabtu":
