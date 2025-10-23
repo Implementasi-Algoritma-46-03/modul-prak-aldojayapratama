@@ -1,86 +1,77 @@
 import java.util.Scanner;
-import java.text.DecimalFormat;
-
 public class TP03 {
 
-    public static double luasPersegi(double sisi) {
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
+        String bangunDatar = s.nextLine();
+        double luas = 0.0;
+        double keliling = 0.0;
+
+        switch (bangunDatar) {
+            case "Persegi" :
+                double sisi = s.nextDouble();
+                luas = lP(sisi);
+                keliling = kP(sisi);
+                break;
+
+            case "Persegi Panjang" :
+                double panjang = s.nextDouble();
+                double lebar = s.nextDouble();
+                luas = lPP(panjang, lebar);
+                keliling = kPP(panjang, lebar);
+                break;
+
+            case "Segitiga" :
+                double alas = s.nextDouble();
+                double tinggi = s.nextDouble();
+                luas = lS(alas, tinggi);
+                keliling = kS(alas, tinggi);
+                break;
+                
+            case "Lingkaran" :
+                double diameter = s.nextDouble();
+                double r = diameter / 2;
+                double pi = 3.14;
+                luas = lL(pi, r);
+                keliling = kL(pi, r);
+
+        }
+        if (bangunDatar.equals("Lingkaran")) {
+            System.out.printf("%.2f %.2f", luas, keliling);
+        } else {
+            System.out.printf("%.0f %.0f", luas, keliling);
+        }
+    }
+
+    private static double lP(double sisi) {
         return sisi * sisi;
     }
 
-    public static double kelilingPersegi(double sisi) {
+    private static double kP(double sisi) {
         return 4 * sisi;
     }
 
-    public static double luasPersegiPanjang(double p, double l) {
-        return p * l;
+    private static double lPP(double panjang, double lebar) {
+        return panjang * lebar;
     }
 
-    public static double kelilingPersegiPanjang(double p, double l) {
-        return 2 * (p + l);
+    private static double kPP(double panjang, double lebar) {
+        return 2 * (panjang + lebar); 
     }
 
-    public static double luasSegitiga(double alas, double tinggi) {
+    private static double lS(double alas, double tinggi) {
         return 0.5 * alas * tinggi;
     }
 
-    public static double kelilingSegitiga(double alas, double tinggi) {
-        double miring = Math.sqrt(alas * alas + tinggi * tinggi);
-        return alas + tinggi + miring;
+    private static double kS(double alas, double tinggi) {
+        double sisiMiring = Math.sqrt(Math.pow(alas / 2, 2) + Math.pow(tinggi, 2));
+        return alas + 2 * sisiMiring;
     }
 
-
-    public static double luasLingkaran(double diameter) {
-        double r = diameter / 2;
-        return Math.PI * r * r;
+    private static double lL(double pi, double r){
+        return pi * r * r;
     }
-
-    public static double kelilingLingkaran(double diameter) {
-        return Math.PI * diameter;
-    }
-
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String bangun = input.nextLine().trim();
-
-        double luas = 0, keliling = 0;
-        boolean valid = true;
-
-        if (bangun.equalsIgnoreCase("Persegi")) {
-            double sisi = input.nextDouble();
-            luas = luasPersegi(sisi);
-            keliling = kelilingPersegi(sisi);
-
-        } else if (bangun.equalsIgnoreCase("Persegi Panjang")) {
-            double p = input.nextDouble();
-            double l = input.nextDouble();
-            luas = luasPersegiPanjang(p, l);
-            keliling = kelilingPersegiPanjang(p, l);
-
-        } else if (bangun.equalsIgnoreCase("Segitiga")) {
-            double alas = input.nextDouble();
-            double tinggi = input.nextDouble();
-            luas = luasSegitiga(alas, tinggi);
-            keliling = kelilingSegitiga(alas, tinggi);
-
-        } else if (bangun.equalsIgnoreCase("Lingkaran")) {
-            double diameter = input.nextDouble();
-            luas = luasLingkaran(diameter);
-            keliling = kelilingLingkaran(diameter);
-
-        } else {
-            System.out.println("Bangun datar tidak dikenali!");
-            valid = false;
-        }
-
-        input.close();
-
-        if (valid) {
-            // Format angka untuk menghilangkan .00 di belakang
-            DecimalFormat df = new DecimalFormat("#.##");
-            String luasFormatted = df.format(luas);
-            String kelilingFormatted = df.format(keliling);
-            
-            System.out.println(luasFormatted + " " + kelilingFormatted);
-        }
+    private static double kL(double pi, double r){
+        return 2 * pi * r;
     }
 }
