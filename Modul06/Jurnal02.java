@@ -1,29 +1,36 @@
 import java.util.Scanner;
-
 public class Jurnal02 {
 
-public static char penganti(String text){
-    int panjang = text.length();
-    int sisa = panjang % 5;
-    switch (sisa) {
-        case 0: return 'A';
-        case 1: return 'E';
-        case 2: return 'I';
-        case 3: return 'O';
-        default: return 'U';
-    }}
-public static void ubahVokal(String text){
-    char vokalBaru = penganti(text);
-    String hasil = text.replaceAll("[AEIOU]", Character.toUpperCase(vokalBaru) + "");
-    hasil = hasil.replaceAll("[aeiou]", Character.toLowerCase(vokalBaru) + "");
-    System.out.println(hasil);
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
+        String lirik = s.nextLine();
 
-}
+        System.out.println(ubahVokal2(ubahVokal(lirik)));
 
-public static void main(String[] args){
-    Scanner in = new Scanner(System.in);
-    String text = in.nextLine();
+    }
+    private static String ubahVokal(String lirik) {
+        if (lirik.length() % 5 == 0)
+            return lirik.replaceAll("[aiueo]", "a");
+        else if (lirik.length() % 5 == 1)
+            return lirik.replaceAll("[aiueo]", "e");
+        else if (lirik.length() % 5 == 2)
+            return lirik.replaceAll("[aiueo]", "i");
+        else if (lirik.length() % 5 == 3)
+            return lirik.replaceAll("[aiueo]", "o");
+        else
+            return lirik.replaceAll("[aiueo]", "u");
+    }
 
-    ubahVokal(text);
+    private static String ubahVokal2(String ubahVokal) {
+        if (ubahVokal.length() % 5 == 0)
+            return ubahVokal.replaceAll("[AIUEO]", "A");
+        else if (ubahVokal.length() % 5 == 1)
+            return ubahVokal.replaceAll("[AIUEO]", "E");
+        else if (ubahVokal.length() % 5 == 2)
+            return ubahVokal.replaceAll("[AIUEO]", "I");
+        else if (ubahVokal.length() % 5 == 3)
+            return ubahVokal.replaceAll("[AIUEO]", "O");
+        else
+            return ubahVokal.replaceAll("[AIUEO]", "U");
     }
 }
