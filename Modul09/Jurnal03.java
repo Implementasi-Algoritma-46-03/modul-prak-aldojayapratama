@@ -18,7 +18,6 @@ public class Jurnal03 {
                 }
             }
         }
-//test
         if (prima == 1) {
             System.out.println("YA");
         } else {
