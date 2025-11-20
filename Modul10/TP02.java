@@ -22,4 +22,4 @@ public class TP02 {
             if (i == 0){
                 break;
             }
-            System.out.println(i);}}} 
+            System.out.println(i);}}}
