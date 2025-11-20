@@ -4,23 +4,22 @@ public class TP02 {
 
     public static void main(final String[] args) {
         // Kerjakan soalnya di sini
+        Scanner in = new Scanner(System.in);
 
-    Scanner input = new Scanner(System.in);
-        int ukuran = input.nextInt();
+        int masukan = in.nextInt();
 
-        for (int baris = 1; baris <= ukuran; baris++) {
-            for (int kolom = 1; kolom <= ukuran; kolom++) {
-
-                if (baris == kolom || baris + kolom == ukuran + 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
+        for (int i = 1; i <= masukan ; i++){
+            for (int j = 1; j < i; j++){
+                System.out.print(" ");
                 }
-
-            }
-            System.out.println();
+                System.out.println(i);  
         }
-
-        input.close();
-    }
-}
+        
+        for (int i = masukan - 1; i < masukan; i--){
+            for (int s = 1; s < i; s++){
+                    System.out.print(" ");
+            }
+            if (i == 0){
+                break;
+            }
+            System.out.println(i);}}}
