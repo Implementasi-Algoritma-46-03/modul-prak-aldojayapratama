@@ -39,4 +39,4 @@ public class TP03 {
                     System.out.print(" ");
             }
             System.out.println();
-        }}}
+     }}}

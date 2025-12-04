@@ -13,7 +13,7 @@ public class TP01 {
             for (int j=0; j<N; j++) {
                 matriks[i][j] = s.nextInt();
                 total += matriks[i][j];
-            }
+          }
 
         }
         System.out.println(total);}
